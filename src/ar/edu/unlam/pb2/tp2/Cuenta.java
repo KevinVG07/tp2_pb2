@@ -1,7 +1,7 @@
 package ar.edu.unlam.pb2.tp2;
 
-public class Cuenta {
-	protected Double saldo;
+public class Cuenta{
+	private Double saldo;
 	
 	public Cuenta(){
 		saldo = 0.0;
@@ -12,18 +12,15 @@ public class Cuenta {
 	}
 	
 	public Boolean extraer(Double valor){
-		if (valor <= saldo) {
 			saldo = saldo - valor;
 			return true;
 		}
-		return false;
-	}
 
-	protected Double getSaldo() {
+	public Double getSaldo() {
 		return saldo;
 	}
 
-	protected void setSaldo(Double saldo) {
+	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
 }

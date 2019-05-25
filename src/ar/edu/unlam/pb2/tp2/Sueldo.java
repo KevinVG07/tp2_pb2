@@ -13,6 +13,9 @@ public class Sueldo extends Cuenta {
 	
 	@Override
 	public Boolean extraer(Double valor){
+		if(super.getSaldo() >= valor){
 		return super.extraer(valor);
+		}
+		return false;
 	}
 }
